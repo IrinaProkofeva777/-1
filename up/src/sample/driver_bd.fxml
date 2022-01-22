@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="412.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.DriverDBController">
+    <ScrollPane layoutX="-3.0" layoutY="120.0" prefHeight="5000.0" prefWidth="1995.0">
+        <TableView fx:id="driverTable" prefHeight="295.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="33.600006103515625" text="id" />
+                <TableColumn fx:id="nameColumn" prefWidth="70.39996337890625" text="name" />
+                <TableColumn fx:id="middlenameColumn" prefWidth="80.00006103515625" text="middlename" />
+                <TableColumn fx:id="passport_serialColumn" prefWidth="118.39996337890625" text="passport_serial" />
+                <TableColumn fx:id="passport_numberColumn" prefWidth="75.0" text="passport_number" />
+                <TableColumn fx:id="postcodeColumn" prefWidth="75.0" text="postcode" />
+                <TableColumn fx:id="addressColumn" prefWidth="75.0" text="address" />
+                <TableColumn fx:id="address_lifeColumn" prefWidth="75.0" text="address_life" />
+                <TableColumn fx:id="companyColumn" prefWidth="75.0" text="company" />
+                <TableColumn fx:id="jobnameColumn" prefWidth="75.0" text="jobname" />
+                <TableColumn fx:id="phoneColumn" prefWidth="75.0" text="phone" />
+                <TableColumn fx:id="emailColumn" prefWidth="75.0" text="email" />
+                <TableColumn fx:id="photoColumn" prefWidth="75.0" text="photo" />
+                <TableColumn fx:id="descriptionColumn" prefWidth="75.0" text="description" />
+            </columns>
+        </TableView>
+    </ScrollPane>
+    <Button layoutX="251.0" layoutY="70.0" mnemonicParsing="false" text="Редактировать" />
+    <TextField layoutX="47.0" layoutY="70.0" prefHeight="26.0" prefWidth="194.0" />
+    <Label layoutX="47.0" layoutY="6.0" prefHeight="64.0" prefWidth="204.0" text="Введите идентификатор водителя для редактирования" textAlignment="CENTER" wrapText="true">
+        <font>
+            <Font name="Comic Sans MS" size="12.0" />
+        </font>
+    </Label>
+    <Button layoutX="395.0" layoutY="70.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="170.0" text="Добавить водителя" />
+</AnchorPane>
