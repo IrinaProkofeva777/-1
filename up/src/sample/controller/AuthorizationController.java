@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -46,12 +45,12 @@ public class AuthorizationController {
 
                 Stage stage = (Stage) signInButton.getScene().getWindow();
                 stage.close();
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/sample/driver_bd.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/sample/fxml/driver_bd.fxml"));
                 Parent root = loader.load();
                 stage = new Stage();
                 stage.initModality(Modality.APPLICATION_MODAL);
                 stage.setScene(new Scene(root, 600, 412));
-                stage.setTitle("Добавление нового водителя");
+                stage.setTitle("Данные о водителях");
                 stage.setResizable(false);
                 stage.show();
 

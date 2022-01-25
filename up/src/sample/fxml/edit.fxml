@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="412.0" prefWidth="555.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.EditController">
+    <children>
+        <AnchorPane prefHeight="105.0" prefWidth="600.0" style="-fx-background-color: #00db8b;">
+            <children>
+                <Label contentDisplay="TOP" layoutX="51.0" layoutY="25.0" text="Редактирование водителя" textFill="WHITE">
+                    <font>
+                        <Font name="Comic Sans MS" size="40.0" />
+                    </font>
+                </Label>
+            </children></AnchorPane>
+        <Button fx:id="editButton" layoutX="233.0" layoutY="363.0" mnemonicParsing="false" onAction="#onEditButton" style="-fx-background-color: #00db8b;" text="Редактировать" textFill="WHITE">
+            <font>
+                <Font name="Comic Sans MS Bold" size="16.0" />
+            </font></Button>
+        <TextField fx:id="id" layoutX="224.0" layoutY="126.0" prefHeight="26.0" prefWidth="150.0" promptText="Идентификатор (GUID)" />
+        <TextField fx:id="middlename" disable="true" layoutX="59.0" layoutY="180.0" promptText="Фамилия" />
+        <TextField fx:id="name" disable="true" layoutX="59.0" layoutY="223.0" promptText="Имя" />
+        <TextField fx:id="company" disable="true" layoutX="228.0" layoutY="313.0" promptText="Место работы" />
+        <TextField fx:id="jobname" disable="true" layoutX="397.0" layoutY="180.0" promptText="Должность" />
+        <TextField fx:id="address_life" disable="true" layoutX="228.0" layoutY="223.0" promptText="Адрес проживания" />
+        <TextField fx:id="phone" disable="true" layoutX="397.0" layoutY="223.0" promptText="Мобильный телефон" />
+        <TextField fx:id="passport_serial" disable="true" layoutX="59.0" layoutY="267.0" promptText="Паспорт серия" />
+        <TextField fx:id="address" disable="true" layoutX="228.0" layoutY="267.0" promptText="Адрес регистрации" />
+        <TextField fx:id="email" disable="true" layoutX="397.0" layoutY="267.0" promptText="Email" />
+        <TextField fx:id="passport_number" disable="true" layoutX="59.0" layoutY="313.0" prefHeight="26.0" prefWidth="150.0" promptText="Номер паспорта" />
+        <TextField fx:id="description" disable="true" layoutX="397.0" layoutY="313.0" promptText="Замечания" />
+      <Button fx:id="buttonOK" layoutX="389.0" layoutY="126.0" mnemonicParsing="false" onAction="#onButtonOK" text="ok" />
+      <TextField fx:id="postcode" disable="true" layoutX="228.0" layoutY="180.0" promptText="postcode( почтовый индекс)" />
+    </children>
+</AnchorPane>

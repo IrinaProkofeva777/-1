@@ -3,13 +3,21 @@ package sample.controller;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import sample.Const;
 import sample.DBHandler;
 import sample.Driver;
 
+import java.awt.event.ActionEvent;
+import java.io.IOException;
 import java.sql.SQLException;
 
 public class DriverDBController {
@@ -18,6 +26,12 @@ public class DriverDBController {
 
     @FXML
     private TableView<Driver> driverTable;
+
+    @FXML
+    private Button addDriver;
+
+    @FXML
+    private Button edinButton;
 
     @FXML
     private TableColumn<Driver, String> addressColumn;
@@ -86,6 +100,26 @@ public class DriverDBController {
         DBHandler dbHandler = new DBHandler();
         DriverData = dbHandler.getDriver();
         driverTable.setItems(DriverData);
+    }
+
+
+    @FXML
+    void onEditButton() throws IOException {
+
+        Stage stage = (Stage) edinButton.getScene().getWindow();
+        stage.close();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/sample/fxml/edit.fxml"));
+        Parent root = loader.load();
+        stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setScene(new Scene(root, 600, 412));
+        stage.setTitle("редактирование водителя");
+        stage.setResizable(false);
+        stage.show();
+    }
+    @FXML
+    void onAddDriver(ActionEvent event) {
+
     }
 
 }
